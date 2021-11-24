@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card mt-3">
+                <div class="card-header text-center">
+                    <strong>{{ titulo }}</strong>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="cursoForm" (ngSubmit)="addCurso()">
+                        <div class="mb-3">
+                          <input formControlName="codigo" type="number" class="form-control" id="codigo" name="codigo" placeholder="Codigo">
+                        </div>
+                        <div class="mb-3">
+                            <input formControlName="nombre" type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                          </div>
+                          <div class="mb-3">
+                            <input formControlName="modalidad" type="text" class="form-control" id="modalidad" name="modalidad" placeholder="Modalidad">
+                          </div>
+                          <div class="mb-3">
+                            <input formControlName="jornada" type="text" class="form-control" id="jornada" name="jornada" placeholder="Jornada">
+                          </div>
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                        <button type="submit" class="btn btn-secondary float-end" [routerLink]="['/listar-cursos']" >Volver</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
